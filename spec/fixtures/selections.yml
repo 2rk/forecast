@@ -1,17 +1,22 @@
-example:
-  name: Example
+opportunity_type:
+  name: Opportunity Type
   is_system: false
   system_code: $LABEL
-example_one:
-  name: One
-  parent: example
+opportunity_type_rails:
+  name: Rails Development
+  parent: opportunity_type
   position_value:
   is_default: true
   system_code: $LABEL
-example_two:
-  name: Two
-  parent: example
+opportunity_type_iphone:
+  name: iPhone Development
+  parent: opportunity_type
   position_value:
-  is_default: false
+  is_default: true
   system_code: $LABEL
-
+opportunity_type_analysis:
+  name: Business / Requirements Analysis
+  parent: opportunity_type
+  position_value:
+  is_default: true
+  system_code: $LABEL

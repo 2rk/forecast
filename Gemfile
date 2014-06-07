@@ -52,6 +52,7 @@ group :development, :test do
   gem "awesome_print"
   gem "capybara"
   gem "factory_girl_rails"
+  gem 'faker'
   gem "fracture"
   gem "database_cleaner"
   gem "hirb"
