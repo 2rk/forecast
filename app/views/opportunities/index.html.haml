@@ -1,0 +1,31 @@
+.page-header
+  %h1 Listing opportunities
+
+.row
+  .col-md-12
+    %table.table.table-striped
+      %tr
+        %th Name
+        %th Organisation
+        %th Type
+        %th Date received
+        %th Source
+        %th Value
+        %th Weighting
+        %th Comments
+
+
+      - @opportunities.each do |opportunity|
+        %tr
+          %td= link_to opportunity.name, opportunity_path(opportunity)
+          %td= opportunity.organisation
+          %td= opportunity.type_id
+          %td= opportunity.date_received
+          %td= opportunity.source_id
+          %td= opportunity.value
+          %td= opportunity.weighting
+          %td= opportunity.comments
+
+    %br
+
+    = link_to 'New Opportunity', new_opportunity_path, id: :new_opportunity_link, class: 'btn btn-primary btn-sm'

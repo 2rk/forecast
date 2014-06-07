@@ -1,0 +1,43 @@
+= form_for @opportunity, html: { "role" =>"form", class: "form-horizontal"} do |f|
+  - if @opportunity.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@opportunity.errors.count, 'error')} prohibited this opportunity from being saved:"
+      %ul
+        - @opportunity.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :name, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.text_field :name, class: 'form-control input-sm'
+  .form-group
+    = f.label :organisation, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.text_field :organisation, class: 'form-control input-sm'
+  .form-group
+    = f.label :type_id, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.text_field :type_id, class: 'form-control input-sm'
+  .form-group
+    = f.label :date_received, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.date_select :date_received, class: 'form-control input-sm'
+  .form-group
+    = f.label :source_id, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.number_field :source_id, class: 'form-control input-sm'
+  .form-group
+    = f.label :value, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.number_field :value, class: 'form-control input-sm'
+  .form-group
+    = f.label :weighting, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.number_field :weighting, class: 'form-control input-sm'
+  .form-group
+    = f.label :comments, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.text_area :comments, class: 'form-control input-sm'
+  .form-group
+    .col-md-6.col-md-offset-2
+      = f.submit 'Save', class: 'btn btn-success btn-sm'

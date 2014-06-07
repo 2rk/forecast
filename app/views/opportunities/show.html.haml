@@ -1,0 +1,29 @@
+.row
+  .col-md-12
+
+    %p
+      %b Name:
+      = @opportunity.name
+    %p
+      %b Organisation:
+      = @opportunity.organisation
+    %p
+      %b Type:
+      = @opportunity.type_id
+    %p
+      %b Date received:
+      = @opportunity.date_received
+    %p
+      %b Source:
+      = @opportunity.source_id
+    %p
+      %b Value:
+      = @opportunity.value
+    %p
+      %b Weighting:
+      = @opportunity.weighting
+    %p
+      %b Comments:
+      = @opportunity.comments
+  
+    = link_to 'Edit', edit_opportunity_path(@opportunity), id: :edit_opportunity_link, class: 'btn btn-sm btn-primary'
