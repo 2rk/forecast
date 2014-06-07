@@ -4,7 +4,7 @@ class CreateOpportunities < ActiveRecord::Migration
       t.string :name
       t.string :organisation
       t.string :type_id
-      t.date :date_received
+      t.date :identified_at
       t.integer :source_id
       t.integer :value
       t.integer :weighting

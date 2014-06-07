@@ -8,7 +8,7 @@
         %th Name
         %th Organisation
         %th Type
-        %th Date received
+        %th Identified Date
         %th Source
         %th Value
         %th Weighting
@@ -20,7 +20,7 @@
           %td= link_to opportunity.name, opportunity_path(opportunity)
           %td= opportunity.organisation
           %td= opportunity.type_id
-          %td= opportunity.date_received
+          %td= opportunity.identified_at
           %td= opportunity.source_id
           %td= opportunity.value
           %td= opportunity.weighting

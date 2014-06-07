@@ -47,6 +47,6 @@ class OpportunitiesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def opportunity_params
-      params.require(:opportunity).permit(:name, :organisation, :type_id, :date_received, :source_id, :value, :weighting, :comments)
+      params.require(:opportunity).permit(:name, :organisation, :type_id, :identified_ay, :source_id, :value, :weighting, :comments)
     end
 end
