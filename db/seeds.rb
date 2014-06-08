@@ -15,5 +15,6 @@ Opportunity.delete_all
 puts 'Creating Opportunities'
 20.times do
   FactoryGirl.create(:opportunity, name: Faker::Company.bs, organisation: Faker::Company.name, type_id: Selection.opportunity_type_rails.id,
-                   identified_at: "2014-01-15", comments: Faker::Lorem::paragraph(3) )
+                   identified_at: Time.now - rand(180).days , est_close_at: Time.now - 10 + rand(60).days, value: rand(13) * 6000,
+                   comments: Faker::Lorem::paragraph(3) )
 end

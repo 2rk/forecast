@@ -8,8 +8,7 @@
         %th Name
         %th Organisation
         %th Type
-        %th Identified Date
-        %th Source
+        %th Close Date
         %th Value
         %th Weighting
         %th Comments
@@ -19,10 +18,9 @@
         %tr
           %td= link_to opportunity.name, opportunity_path(opportunity)
           %td= opportunity.organisation
-          %td= opportunity.type_id
-          %td= opportunity.identified_at
-          %td= opportunity.source_id
-          %td= opportunity.value
+          %td= opportunity.type
+          %td= date_display opportunity.est_close_at
+          %td= number_to_currency(opportunity.value, precision: 0)
           %td= opportunity.weighting
           %td= opportunity.comments
 
