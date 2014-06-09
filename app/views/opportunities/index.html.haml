@@ -5,13 +5,13 @@
   .col-md-12
     %table.table.table-striped
       %tr
-        %th Name
+        %th Oppty
         %th Organisation
         %th Type
-        %th Close Date
+        %th Stage
+        %th Est Close
         %th Value
         %th Weighting
-        %th Comments
 
 
       - @opportunities.each do |opportunity|
@@ -19,10 +19,10 @@
           %td= link_to opportunity.name, opportunity_path(opportunity)
           %td= opportunity.organisation
           %td= opportunity.type
+          %td= opportunity.stage
           %td= date_display opportunity.est_close_at
           %td= number_to_currency(opportunity.value, precision: 0)
-          %td= opportunity.weighting
-          %td= opportunity.comments
+          %td= number_to_percentage(opportunity.weighting, precision: 0)
 
     %br
 

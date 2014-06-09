@@ -17,7 +17,11 @@
   .form-group
     = f.label :type_id, class: 'col-md-2 control-label'
     .col-md-6
-      = f.text_field :type_id, class: 'form-control input-sm'
+      = f.selections :type, class: 'form-control input-sm'
+  .form-group
+    = f.label :stage_id, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.selections :stage, class: 'form-control input-sm'
   .form-group
     = f.label :identified_at, class: 'col-md-2 control-label'
     .col-md-6
