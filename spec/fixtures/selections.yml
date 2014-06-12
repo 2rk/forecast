@@ -1,3 +1,37 @@
+opportunity_source:
+  name: Opportunity Source
+  is_system: false
+  system_code: $LABEL
+opportunity_source_direct:
+  name: Direct
+  parent: opportunity_source
+  position_value: 10
+  is_default: true
+  system_code: $LABEL
+opportunity_source_partner:
+  name: Partner
+  parent: opportunity_source
+  position_value: 20
+  is_default: false
+  system_code: $LABEL
+opportunity_source_networking:
+  name: Networking Group / Event
+  parent: opportunity_source
+  position_value: 30
+  is_default: false
+  system_code: $LABEL
+opportunity_source_website:
+  name: Website
+  parent: opportunity_source
+  position_value: 40
+  is_default: false
+  system_code: $LABEL
+opportunity_source_other:
+  name: Other
+  parent: opportunity_source
+  position_value: 50
+  is_default: false
+  system_code: $LABEL
 opportunity_stage:
   name: Opportunity Stage
   is_system: false
