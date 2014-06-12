@@ -36,14 +36,35 @@
       %label.col-md-2.control-label Comments:
       .col-md-9
         = @opportunity.comments
+    .row
+      %h4.col-md-2 Dates
+    .row
+      %label.col-md-2.control-label Idea:
+      .col-md-9
+        = date_display @opportunity.idea_at
+    .row
+      %label.col-md-2.control-label Lead:
+      .col-md-9
+        = date_display @opportunity.lead_at
+    .row
+      %label.col-md-2.control-label Initial Contact:
+      .col-md-9
+        = date_display @opportunity.initial_contact_at
+    .row
+      %label.col-md-2.control-label Needs Analysis:
+      .col-md-9
+        = date_display @opportunity.needs_analysis_at
+    .row
+      %label.col-md-2.control-label Solution Development:
+      .col-md-9
+        = date_display @opportunity.solution_development_at
+    .row
+      %label.col-md-2.control-label Negotiation:
+      .col-md-9
+        = date_display @opportunity.negotiation_at
+    .row
+      %label.col-md-2.control-label Won / Lost:
+      .col-md-9
+        = date_display @opportunity.won_lost_at
 
--#add_column :opportunities, :idea_at, :date
--#add_column :opportunities, :lead_at, :date
--#add_column :opportunities, :initial_contact_at, :date
--#add_column :opportunities, :needs_analysis_at, :date
--#add_column :opportunities, :solution_development_at, :date
--#add_column :opportunities, :negotiation_at, :date
--#add_column :opportunities, :won_lost_at, :date
-
-  
 = link_to 'Edit', edit_opportunity_path(@opportunity), id: :edit_opportunity_link, class: 'btn btn-sm btn-primary'
