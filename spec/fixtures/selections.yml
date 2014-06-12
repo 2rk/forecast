@@ -50,12 +50,6 @@ opportunity_stage_lost:
   position_value: 80
   is_default: false
   system_code: $LABEL
-opportunity_stage_idea:
-  name: Idea
-  parent: opportunity_stage
-  position_value: 10
-  is_default: true
-  system_code: $LABEL
 opportunity_type:
   name: Opportunity Type
   is_system: false
