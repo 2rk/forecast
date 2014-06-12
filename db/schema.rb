@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140612195705) do
+ActiveRecord::Schema.define(version: 20140612214254) do
 
   create_table "opportunities", force: true do |t|
     t.string   "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20140612195705) do
     t.date     "solution_development_at"
     t.date     "negotiation_at"
     t.date     "won_lost_at"
+    t.string   "source_detail"
   end
 
   create_table "selections", force: true do |t|

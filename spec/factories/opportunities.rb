@@ -7,6 +7,7 @@ FactoryGirl.define do
     type_id "MyString"
     identified_at "2014-06-07"
     source_id 1
+    source_detail "MyText"
     value 1
     weighting 1
     comments "MyText"

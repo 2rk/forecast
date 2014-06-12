@@ -21,6 +21,10 @@
       .col-md-9
         = @opportunity.source
     .row
+      %label.col-md-2.control-label Source Details:
+      .col-md-9
+        = @opportunity.source_detail
+    .row
       %label.col-md-2.control-label Value:
       .col-md-9
         = number_to_currency(@opportunity.value, precision: 0)
