@@ -13,9 +13,13 @@
       .col-md-9
         = @opportunity.type
     .row
+      %label.col-md-2.control-label Stage:
+      .col-md-9
+        = @opportunity.stage
+    .row
       %label.col-md-2.control-label Est Close Date:
       .col-md-9
-        = @opportunity.est_close_at
+        = date_display @opportunity.est_close_at
     .row
       %label.col-md-2.control-label Source:
       .col-md-9
