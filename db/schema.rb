@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140612214254) do
+ActiveRecord::Schema.define(version: 20140619043942) do
 
   create_table "opportunities", force: true do |t|
     t.string   "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140612214254) do
     t.date     "negotiation_at"
     t.date     "won_lost_at"
     t.string   "source_detail"
+    t.string   "contact_name"
   end
 
   create_table "selections", force: true do |t|

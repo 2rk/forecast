@@ -4,6 +4,7 @@ FactoryGirl.define do
   factory :opportunity do
     name "MyString"
     organisation "MyString"
+    contact_name "MyString"
     type_id "MyString"
     identified_at "2014-06-07"
     source_id 1

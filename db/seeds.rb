@@ -18,5 +18,5 @@ puts 'Creating Opportunities'
   FactoryGirl.create(:opportunity, name: Faker::Company.bs, organisation: Faker::Company.name, type_id: Selection.opportunity_type_rails.id,
                    identified_at: Time.now - rand(180).days , est_close_at: Time.now - 10 + rand(60).days, value: rand(13) * 6000,
                    stage_id: Selection.opportunity_stage_idea.id, weighting: 10,comments: Faker::Lorem::paragraph(3),
-                  source_id: Selection.opportunity_source_partner.id)
+                  source_id: Selection.opportunity_source_partner.id, contact_name: Faker::Name.name)
 end

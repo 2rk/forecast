@@ -11,6 +11,10 @@
     .col-md-6
       = f.text_field :organisation, class: 'form-control input-sm'
   .form-group
+    = f.label :contact_name, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.text_field :contact_name, class: 'form-control input-sm'
+  .form-group
     = f.label :name, class: 'col-md-2 control-label'
     .col-md-6
       = f.text_field :name, class: 'form-control input-sm'
@@ -32,8 +36,8 @@
   -#        %span.glyphicon.glyphicon-calendar
   .form-group
     = f.label :identified_at, class: 'col-md-2 control-label'
-    .col-md-6
-      = f.date_select :identified_at, class: 'form-control input-sm'
+    .col-md-2
+      = f.date_select :identified_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
   .form-group
     = f.label :source_id, class: 'col-md-2 control-label'
     .col-md-3
@@ -51,37 +55,41 @@
     .col-md-2
       = f.text_field :weighting, class: 'form-control input-sm'
   .form-group
+    = f.label :est_close_at, class: 'col-md-2 control-label'
+    .col-md-2
+      = f.date_select :est_close_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
+  .form-group
     = f.label :comments, class: 'col-md-2 control-label'
     .col-md-6
       = f.text_area :comments, class: 'form-control input-sm'
   .form-group
     = f.label :idea_at, class: 'col-md-2 control-label'
-    .col-md-6
-      = f.date_select :idea_at, class: 'form-control input-sm'
+    .col-md-2
+      = f.date_select :idea_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
   .form-group
     = f.label :lead_at, class: 'col-md-2 control-label'
-    .col-md-6
-      = f.date_select :lead_at, class: 'form-control input-sm'
+    .col-md-2
+      = f.date_select :lead_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
   .form-group
-    = f.label :initial_contact_at, class: 'col-md-2 control-label'
-    .col-md-6
-      = f.date_select :initial_contact_at, class: 'form-control input-sm'
+    = f.label :initial_contact_at, {:include_blank => true, :default => nil}, class: 'col-md-2 control-label'
+    .col-md-2
+      = f.date_select :initial_contact_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
   .form-group
     = f.label :needs_analysis_at, class: 'col-md-2 control-label'
-    .col-md-6
-      = f.date_select :needs_analysis_at, class: 'form-control input-sm'
+    .col-md-2
+      = f.date_select :needs_analysis_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
   .form-group
     = f.label :solution_development_at, class: 'col-md-2 control-label'
-    .col-md-6
-      = f.date_select :solution_development_at, class: 'form-control input-sm'
+    .col-md-2
+      = f.date_select :solution_development_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
   .form-group
     = f.label :negotiation_at, class: 'col-md-2 control-label'
-    .col-md-6
-      = f.date_select :negotiation_at, class: 'form-control input-sm'
+    .col-md-2
+      = f.date_select :negotiation_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
   .form-group
-    = f.label :won_lost_at, class: 'col-md-2 control-label'
-    .col-md-6
-      = f.date_select :won_lost_at, class: 'form-control input-sm'
+    = f.label :won_lost_at,  class: 'col-md-2 control-label'
+    .col-md-2
+      = f.date_select :won_lost_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
   .form-group
     .col-md-6.col-md-offset-2
       = f.submit 'Save', class: 'btn btn-success btn-sm'
