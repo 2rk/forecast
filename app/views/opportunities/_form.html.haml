@@ -7,17 +7,17 @@
           %li= msg
 
   .form-group
+    = f.label :name, 'Opportunity',class: 'col-md-2 control-label'
+    .col-md-3
+      = f.text_field :name, class: 'form-control input-sm'
+  .form-group
     = f.label :organisation, class: 'col-md-2 control-label'
-    .col-md-6
+    .col-md-3
       = f.text_field :organisation, class: 'form-control input-sm'
   .form-group
     = f.label :contact_name, class: 'col-md-2 control-label'
-    .col-md-6
+    .col-md-3
       = f.text_field :contact_name, class: 'form-control input-sm'
-  .form-group
-    = f.label :name, class: 'col-md-2 control-label'
-    .col-md-6
-      = f.text_field :name, class: 'form-control input-sm'
   .form-group
     = f.label :type_id, class: 'col-md-2 control-label'
     .col-md-3
@@ -26,18 +26,13 @@
     = f.label :stage_id, class: 'col-md-2 control-label'
     .col-md-3
       = f.selections :stage,  {}, class: 'form-control input-sm'
-  -##TODO get date picker working
-  -#.form-group
-  -#  = f.label :identified_at, class: 'col-md-2 control-label'
-  -#  .col-md-2
-  -#    .input-group.date.datetimepicker
-  -#      = f.text_field :identified_at, { class: 'form-control input-sm', value: datetime_display(@opportunity.identified_at) }
-  -#      %span.input-group-addon
-  -#        %span.glyphicon.glyphicon-calendar
   .form-group
     = f.label :identified_at, class: 'col-md-2 control-label'
     .col-md-2
-      = f.date_select :identified_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
+      .input-group.date.datetimepicker
+        = f.text_field :identified_at, value: "#{date_display(f.object.identified_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
+        %span.input-group-addon
+          %span.glyphicon.glyphicon-calendar
   .form-group
     = f.label :source_id, class: 'col-md-2 control-label'
     .col-md-3
@@ -57,7 +52,10 @@
   .form-group
     = f.label :est_close_at, class: 'col-md-2 control-label'
     .col-md-2
-      = f.date_select :est_close_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
+      .input-group.date.datetimepicker
+        = f.text_field :est_close_at, value: "#{date_display(f.object.est_close_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
+        %span.input-group-addon
+          %span.glyphicon.glyphicon-calendar
   .form-group
     = f.label :comments, class: 'col-md-2 control-label'
     .col-md-6
@@ -65,31 +63,52 @@
   .form-group
     = f.label :idea_at, class: 'col-md-2 control-label'
     .col-md-2
-      = f.date_select :idea_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
+      .input-group.date.datetimepicker
+        = f.text_field :idea_at, value: "#{date_display(f.object.idea_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
+        %span.input-group-addon
+          %span.glyphicon.glyphicon-calendar
   .form-group
     = f.label :lead_at, class: 'col-md-2 control-label'
     .col-md-2
-      = f.date_select :lead_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
+      .input-group.date.datetimepicker
+        = f.text_field :lead_at, value: "#{date_display(f.object.lead_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
+        %span.input-group-addon
+          %span.glyphicon.glyphicon-calendar
   .form-group
     = f.label :initial_contact_at, {:include_blank => true, :default => nil}, class: 'col-md-2 control-label'
     .col-md-2
-      = f.date_select :initial_contact_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
+      .input-group.date.datetimepicker
+        = f.text_field :initial_contact_at, value: "#{date_display(f.object.initial_contact_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
+        %span.input-group-addon
+          %span.glyphicon.glyphicon-calendar
   .form-group
     = f.label :needs_analysis_at, class: 'col-md-2 control-label'
     .col-md-2
-      = f.date_select :needs_analysis_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
+      .input-group.date.datetimepicker
+        = f.text_field :needs_analysis_at, value: "#{date_display(f.object.needs_analysis_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
+        %span.input-group-addon
+          %span.glyphicon.glyphicon-calendar
   .form-group
     = f.label :solution_development_at, class: 'col-md-2 control-label'
     .col-md-2
-      = f.date_select :solution_development_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
+      .input-group.date.datetimepicker
+        = f.text_field :solution_development_at, value: "#{date_display(f.object.solution_development_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
+        %span.input-group-addon
+          %span.glyphicon.glyphicon-calendar
   .form-group
     = f.label :negotiation_at, class: 'col-md-2 control-label'
     .col-md-2
-      = f.date_select :negotiation_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
+      .input-group.date.datetimepicker
+        = f.text_field :negotiation_at, value: "#{date_display(f.object.negotiation_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
+        %span.input-group-addon
+          %span.glyphicon.glyphicon-calendar
   .form-group
     = f.label :won_lost_at,  class: 'col-md-2 control-label'
     .col-md-2
-      = f.date_select :won_lost_at, {:include_blank => true, :default => nil}, class: 'form-control input-sm'
+      .input-group.date.datetimepicker
+        = f.text_field :won_lost_at, value: "#{date_display(f.object.won_lost_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
+        %span.input-group-addon
+          %span.glyphicon.glyphicon-calendar
   .form-group
     .col-md-6.col-md-offset-2
       = f.submit 'Save', class: 'btn btn-success btn-sm'

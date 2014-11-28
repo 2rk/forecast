@@ -47,7 +47,8 @@ gem "rvm-capistrano", "~> 1.4.4"
 gem "devise"
 gem "cancan"
 gem "bootstrap-sass"
-gem 'bootstrap3-datetimepicker-rails', '~> 3.0.0'
+gem 'momentjs-rails', '~> 2.5.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 2.1.30'
 gem "kitestrings", git: "https://github.com/2rk/kitestrings.git"
 group :development, :test do
   gem "awesome_print"

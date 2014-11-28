@@ -52,7 +52,7 @@ GEM
     bcrypt (3.1.7)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
-    bootstrap3-datetimepicker-rails (3.0.0)
+    bootstrap3-datetimepicker-rails (2.1.30)
       momentjs-rails (~> 2.5.0)
     builder (3.2.2)
     cancan (1.6.10)
@@ -229,7 +229,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bootstrap-sass
-  bootstrap3-datetimepicker-rails (~> 3.0.0)
+  bootstrap3-datetimepicker-rails (~> 2.1.30)
   cancan
   capistrano (~> 2.0)
   capybara
@@ -244,6 +244,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kitestrings!
+  momentjs-rails (~> 2.5.0)
   mysql2
   rails (= 4.1.1)
   rspec (~> 2.14)

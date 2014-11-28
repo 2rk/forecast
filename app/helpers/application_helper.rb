@@ -1,7 +1,9 @@
 module ApplicationHelper
   def date_display date
-    if date
+    if date.present?
       date.strftime('%d/%m/%Y')
+    else
+      Date.today.strftime('%d/%m/%Y')
     end
   end
 
