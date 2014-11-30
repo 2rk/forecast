@@ -109,6 +109,10 @@
         = f.text_field :won_lost_at, value: "#{date_display(f.object.won_lost_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
         %span.input-group-addon
           %span.glyphicon.glyphicon-calendar
+  -#.form-group
+  -#  .col-md-6.col-md-offset-2
+  -#= f.submit 'Save', class: 'btn btn-success btn-sm'
   .form-group
     .col-md-6.col-md-offset-2
-      = f.submit 'Save', class: 'btn btn-success btn-sm'
+      = f.submit nil, class: 'btn btn-standard btn-sm'
+      = yield :cancel
