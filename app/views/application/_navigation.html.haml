@@ -1,0 +1,11 @@
+%nav.navbar.navbar-default{role: 'navigation'}
+  .navbar-header
+    %button.navbar-toggle{"data-toggle" => 'collapse', "data-target" => '#menu'}
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+  .collapse.navbar-collapse#menu
+    %ul.nav.navbar-nav
+      %li
+        = link_to 'Opportunities', opportunities_path, id: 'admin_companies_link'
