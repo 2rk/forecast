@@ -12,6 +12,7 @@
         %th Est Close
         %th Value
         %th Weighting
+        %th Days effort
 
 
       - @opportunities.each do |opportunity|
@@ -23,6 +24,7 @@
           %td= date_display opportunity.est_close_at
           %td= number_to_currency(opportunity.value, precision: 0)
           %td= number_to_percentage(opportunity.weighting, precision: 0)
+          %td= opportunity.est_effort_days
 
     %br
 

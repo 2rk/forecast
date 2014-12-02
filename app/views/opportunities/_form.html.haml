@@ -27,6 +27,14 @@
     .col-md-3
       = f.selections :stage,  {}, class: 'form-control input-sm'
   .form-group
+    = f.label :lost_reason_type_id, class: 'col-md-2 control-label'
+    .col-md-3
+      = f.selections :lost_reason_type,  {}, class: 'form-control input-sm'
+  .form-group
+    = f.label :lost_reason, class: 'col-md-2 control-label'
+    .col-md-3
+      = f.text_field :lost_reason, class: 'form-control input-sm'
+  .form-group
     = f.label :identified_at, class: 'col-md-2 control-label'
     .col-md-2
       .input-group.date.datetimepicker
@@ -39,15 +47,19 @@
       = f.selections :source, {}, class: 'form-control input-sm'
   .form-group
     = f.label :source_detail, class: 'col-md-2 control-label'
-    .col-md-6
+    .col-md-3
       = f.text_field :source_detail, class: 'form-control input-sm'
   .form-group
     = f.label :value, class: 'col-md-2 control-label'
-    .col-md-2
+    .col-md-1
       = f.text_field :value, class: 'form-control input-sm'
   .form-group
+    = f.label :est_effort_days, 'Est effort (days)', class: 'col-md-2 control-label'
+    .col-md-1
+      = f.number_field :est_effort_days, class: 'form-control input-sm'
+  .form-group
     = f.label :weighting, 'Weighting %', class: 'col-md-2 control-label'
-    .col-md-2
+    .col-md-1
       = f.text_field :weighting, class: 'form-control input-sm'
   .form-group
     = f.label :est_close_at, class: 'col-md-2 control-label'

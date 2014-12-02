@@ -20,6 +20,15 @@
       %label.col-md-2.control-label Stage:
       .col-md-9
         = @opportunity.stage
+    - if @opportunity.stage_id == Selection.opportunity_stage_lost.id
+      .row
+        %label.col-md-2.control-label Lost Reason:
+        .col-md-9
+          = "#{@opportunity.lost_reason_type} - #{@opportunity.lost_reason}"
+    .row
+      %label.col-md-2.control-label Identified:
+      .col-md-9
+        = date_display @opportunity.identified_at
     .row
       %label.col-md-2.control-label Est Close Date:
       .col-md-9
@@ -40,6 +49,10 @@
       %label.col-md-2.control-label Weighting:
       .col-md-9
         = number_to_percentage(@opportunity.weighting, precision: 0 )
+    .row
+      %label.col-md-2.control-label Est Effort (days):
+      .col-md-9
+        = @opportunity.est_effort_days
     .row
       %label.col-md-2.control-label Comments:
       .col-md-9
