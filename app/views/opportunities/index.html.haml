@@ -1,17 +1,37 @@
 .page-header
-  %h1 Listing opportunities
+  %h3 Listing opportunities
+
+.row
+  .col-md-12
+    .row
+      %label.col-md-2.control-label Total # Opportunities:
+      .col-md-9
+        -#TODO calculate just non closed / lost
+        = @opportunities.count
+    .row
+      %label.col-md-2.control-label Total Opportunity Value:
+      .col-md-9
+        -#TODO calculate just non closed / lost
+        = number_to_currency(@opportunities.map(&:value).sum, precision: 0)
+    .row
+      %label.col-md-2.control-label Weighted Opportunites:
+      .col-md-9
+        -#TODO calculate just non closed / lost
+        = number_to_currency(Opportunity.all.map(&:weighted_value).sum, precision: 0)
+
 
 .row
   .col-md-12
     %table.table.table-striped
       %tr
         %th Oppty
-        %th Organisation
+        %th Org
         %th Type
         %th Stage
         %th Est Close
         %th Value
         %th Weighting
+        %th W Value
         %th Days effort
 
 
@@ -24,6 +44,7 @@
           %td= date_display opportunity.est_close_at
           %td= number_to_currency(opportunity.value, precision: 0)
           %td= number_to_percentage(opportunity.weighting, precision: 0)
+          %td= number_to_currency(opportunity.weighted_value, precision: 0)
           %td= opportunity.est_effort_days
 
     %br

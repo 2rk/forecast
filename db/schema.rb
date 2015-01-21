@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141130214453) do
+ActiveRecord::Schema.define(version: 20141203232803) do
 
   create_table "opportunities", force: true do |t|
     t.string   "name"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20141130214453) do
     t.string   "type_id"
     t.date     "identified_at"
     t.integer  "source_id"
-    t.integer  "value"
+    t.integer  "value",                   default: 0
     t.integer  "weighting"
     t.text     "comments"
     t.datetime "created_at"
