@@ -102,11 +102,8 @@
           %span.glyphicon.glyphicon-calendar
   .form-group
     = f.label :solution_development_at, class: 'col-md-2 control-label'
-    .col-md-2
-      .input-group.date.datetimepicker
-        = f.text_field :solution_development_at, value: "#{date_display(f.object.solution_development_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
-        %span.input-group-addon
-          %span.glyphicon.glyphicon-calendar
+    .col-md-3
+      = f.text_field :solution_development_at, value: "#{date_display(f.object.solution_development_at)}", class: 'form-control input-sm', "data-date-format" => "DD/MM/YYYY"
   .form-group
     = f.label :negotiation_at, class: 'col-md-2 control-label'
     .col-md-2

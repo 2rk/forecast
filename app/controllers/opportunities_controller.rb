@@ -2,7 +2,8 @@ class OpportunitiesController < ApplicationController
   before_action :set_opportunity, only: [:show, :edit, :update, :destroy]
 
   def index
-    @opportunities = Opportunity.all
+    # @opportunities = Opportunity.where(:active?).order(:est_close_at)
+    @opportunities = Opportunity.all.order(:est_close_at)
   end
 
   def show
