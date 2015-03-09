@@ -28,6 +28,7 @@
         %th Org
         %th Type
         %th Stage
+        %th Created
         %th Est Close
         %th Value
         %th Weighting
@@ -41,6 +42,7 @@
           %td= opportunity.organisation
           %td= opportunity.type
           %td= opportunity.stage
+          %td= date_display opportunity.identified_at
           %td= date_display opportunity.est_close_at
           %td= number_to_currency(opportunity.value, precision: 0)
           %td= number_to_percentage(opportunity.weighting, precision: 0)

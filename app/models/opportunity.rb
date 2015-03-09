@@ -13,4 +13,8 @@ class Opportunity < ActiveRecord::Base
       0
     end
   end
+
+  def active?
+    won_lost_at.blank?
+  end
 end
